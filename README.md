@@ -1,0 +1,197 @@
+# kayatext
+
+**한글(HWP)·엑셀·워드 문서에서 AI 가 읽을 텍스트를 뽑습니다.**
+
+[내려받기](../../releases/latest) · [버그 제보](../../issues) ·
+[다른 도구](https://github.com/kjh0523/kayautils)
+
+여기는 배포처입니다. 소스는 들어 있지 않고 실행 파일만 올라옵니다
+([왜 그런지](#소스가-없는-이유)).
+
+---
+
+## 왜 만들었나
+
+AI 에 문서를 넣으려면 먼저 텍스트로 만들어야 합니다. 그런데 **HWP 는 그게 안 됩니다.**
+docx·pdf 는 읽어 주는 도구가 많지만 한글 문서는 그렇지 않고, **국내 공공문서는
+대부분 HWP** 입니다.
+
+그리고 그냥 글자만 뽑으면 반쪽입니다. **검색 품질은 구조가 남아 있느냐로 갈립니다** —
+표가 줄글로 뭉개지면 검색이 틀리고, 제목이 없으면 문서를 자를 경계를 잡을 수 없습니다.
+
+그래서 기본 출력이 **Markdown** 입니다. 표는 `|` 표로, 시트는 `##` 제목으로 나갑니다.
+시장이 이미 Markdown 을 그대로 청킹하므로 그 파이프라인에 바로 들어갑니다.
+
+```
+116쪽짜리 공문 하나 → Markdown 193,000자 · 표 91개
+```
+
+표 91개가 전부 살아남습니다. 순수 텍스트로 뽑으면 그게 다 줄글이 됩니다.
+
+---
+
+## 쓰는 법
+
+```bash
+kayatext 회의록.hwp                  # 회의록.md 로
+kayatext *.hwp *.xlsx -o out/        # 여러 개를 한 폴더로
+kayatext 문서.hwp --txt              # 순수 텍스트로 (구조를 버림)
+kayatext 문서.hwp -                  # 표준 출력으로 (파이프용)
+kayatext --version
+kayatext --licenses                  # 오픈소스 고지
+```
+
+**파일 하나가 실패해도 멈추지 않습니다.** 실패 목록을 모아 마지막에 보고하고,
+하나라도 실패했으면 종료 코드 1 을 냅니다 — 스크립트가 판정할 수 있어야 하니까요.
+
+### 받는 형식
+
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`
+
+RTF 는 문단까지만 읽습니다 — 원본에 표가 있으면 줄글로 나옵니다. 그건 우리가 버린
+것이 아니라 파서가 주지 않는 것이고, 결과에 그렇게 적어 드립니다.
+
+`.pdf` `.pptx` `.doc` 는 아직입니다.
+
+---
+
+## 내려받기
+
+| | |
+|---|---|
+| **macOS (Apple Silicon)** | ✅ [내려받기](../../releases/latest) |
+| Windows (x64) | 준비 중 |
+| Linux (x64, musl) | 준비 중 |
+| macOS (Intel) | 후순위 |
+
+압축을 풀면 실행 파일 하나와 라이선스·고지 문서가 들어 있습니다.
+의존성이 없어 어디에 두고 실행해도 됩니다.
+
+```bash
+tar xzf kayatext-macos-arm64.tar.gz
+cd kayatext-macos-arm64
+./kayatext --version
+```
+
+`PATH` 에 두면 어디서나 부를 수 있습니다.
+
+```bash
+sudo mv kayatext /usr/local/bin/
+```
+
+> **서명이 없어 macOS 가 처음에 막습니다.** 개인 프로젝트라 아직 개발자 인증서를
+> 붙이지 않았습니다. 시스템 설정 → 개인정보 보호 및 보안에서 한 번 허용하시면 됩니다.
+
+---
+
+## 라이선스
+
+**오픈소스가 아닙니다.** 배포물의 `LICENSE.txt` 가 전문입니다.
+
+| | |
+|---|---|
+| 개인 · 학습 · 연구 · 비영리 | **무료** |
+| 법인 · 공공기관의 도입 검토 | **무료** |
+| 법인 · 공공기관의 계속적인 업무 사용 | 기업 라이선스 |
+
+**기능 제한은 없습니다.** 무료로 쓰든 기업 라이선스로 쓰든 되는 일이 같습니다.
+사용량을 세거나 기능을 잠그는 코드는 들어 있지 않습니다. 기업 라이선스로 받는 것은
+**적법한 사용 권리와 그 증빙**입니다.
+
+**재배포는 금지합니다.** 다른 사람이 받아 갈 수 있는 곳에 설치 파일을 올려 두는 것도
+여기 포함됩니다 — 사내 공유 폴더, 파일 서버, 그룹웨어 자료실, 웹하드, 공유 설정된
+클라우드 드라이브가 모두 해당합니다. 알려 주실 때는 파일 대신 이 저장소 주소를 전해
+주세요. 조직 안에 배포해야 하는 사정이 있으시면 이슈로 알려 주시면 별도 조건을
+협의할 수 있습니다.
+
+**뽑아낸 텍스트에는 아무 제한이 없습니다.** 전적으로 여러분의 것입니다.
+
+### 오픈소스 고지
+
+```bash
+kayatext --licenses
+```
+
+배포물의 `THIRD-PARTY-NOTICES.md` 에도 전문이 있습니다.
+
+HWP 변환은 [rhwp](https://github.com/edwardkim/rhwp)(MIT) 위에 서 있습니다.
+그 프로젝트가 없었으면 이 도구도 없었습니다.
+
+---
+
+## 소스가 없는 이유
+
+개인이 만드는 도구이고, 재배포를 막는 쪽을 골랐습니다. 받아 가는 길이 한 곳이어야
+어떤 버전이 돌아다니는지 알 수 있고, 문제가 생겼을 때 고친 것이 실제로 전달됩니다.
+
+다른 오픈소스에 낸 기여와 그 근거는 공개합니다.
+
+---
+
+## 안 되는 문서를 알려 주세요
+
+시험용으로 만든 파일로는 잡히지 않는 버그가 있습니다. **실제 문서에만 있는 것들**
+때문입니다 — 11열 병합, 도형이 섞인 표, 오래된 한글로 만든 서식.
+
+### 가장 도움이 되는 것
+
+**공개된 정부·공공기관 문서**입니다. 공고문, 서식, 보도자료 — 파일을 보내실 필요
+없이 **내려받을 수 있는 주소만** 알려 주시면 됩니다.
+
+### 회사 문서라면 — 올리지 마세요
+
+업무 문서에는 이름·연락처가 들어 있고 **작성자는 파일 정보에도 남습니다.** 공개된
+곳에 올리면 되돌릴 수 없고, 올리신 분이 곤란해질 수 있습니다.
+
+대신 **증상만** 적어 주세요. 「표가 있는 3쪽짜리 공문인데 2쪽부터 선이 사라진다」
+정도면 비슷한 파일을 만들어 재현합니다. 꼭 파일이 필요하면 비공개로 주고받고,
+익명화 방법을 안내드립니다.
+
+### 감사의 표시
+
+보내 주신 것이 실제로 버그를 잡았거나 회귀 시험에 들어가면 —
+
+- 회귀 시험 목록에 이름을 올립니다 (원하시면)
+- **기업 라이선스를 무상으로 드립니다.** 회사에서 쓰셔야 하는 분께 값이 될 겁니다.
+  개인·학습용은 원래 무료라 따로 드릴 것이 없습니다
+
+라이선스를 받으려고 무리해서 파일을 보내지는 마세요.
+**주소 하나가 파일 열 개보다 낫습니다.**
+
+---
+
+## English
+
+**kayatext** extracts text and Markdown from HWP (the Korean word processor format),
+Excel, Word, and RTF files, so they can be fed to AI pipelines **with their tables and
+headings intact**.
+
+HWP is the point. Other formats already have good extractors; Korean public-sector
+documents do not — and nearly all of them are HWP.
+
+Markdown is the default output because retrieval quality depends on structure
+surviving: a table flattened into prose retrieves badly, and without headings there is
+no boundary to chunk on. One 116-page government document yields 193,000 characters of
+Markdown with all 91 of its tables intact.
+
+Accepts `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`. A failing file does not
+stop the run; failures are collected and reported at the end, with exit code 1.
+
+**This repository ships binaries only — it is not open source.** Free for personal,
+educational, non-profit, and evaluation use, with **no functional limits whatsoever**.
+A commercial license is required for ongoing business use by companies and public
+institutions; it grants the right to use and the paperwork to prove it, not extra
+features. Redistribution — including placing the archive on a shared drive or file
+server — is not permitted; please share this repository's address instead. Whatever you
+extract is entirely yours.
+
+Bundled open-source components remain under their own licenses; run `kayatext
+--licenses`. HWP support is built on [rhwp](https://github.com/edwardkim/rhwp) (MIT).
+
+Bug reports are welcome. **Please do not attach real work documents** — they carry
+personal data, and author names survive in file metadata. Describe the symptom, or link
+to a publicly published government document that reproduces it.
+
+---
+
+Copyright © 2026 가야태자 (kjh0523). All rights reserved.

@@ -1,0 +1,12 @@
+# 여기는 배포처다. 소스도 빌드 산출물도 들어오지 않는다.
+# 바이너리는 git 이 아니라 Releases 에 올린다 — git 은 지운 것도 영원히 들고 다녀,
+# 한 번 커밋한 4MB 짜리는 되돌릴 수 없다.
+*.tar.gz
+*.zip
+*.exe
+*.dmg
+*.app/
+dist*/
+target/
+node_modules/
+.DS_Store
