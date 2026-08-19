@@ -59,13 +59,21 @@ RTF 는 문단까지만 읽습니다 — 원본에 표가 있으면 줄글로 �
 
 | | |
 |---|---|
-| **macOS (Apple Silicon)** | ✅ [내려받기](../../releases/latest) |
-| Windows (x64) | 준비 중 |
+| **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
+| **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
 | Linux (x64, musl) | 준비 중 |
 | macOS (Intel) | 후순위 |
 
-압축을 풀면 실행 파일 하나와 라이선스·고지 문서가 들어 있습니다.
-의존성이 없어 어디에 두고 실행해도 됩니다.
+압축을 풀면 네 개가 들어 있습니다.
+
+```
+kayatext        실행 파일
+rhwp            HWP 변환기 — 이게 있어야 .hwp 가 됩니다
+LICENSE.txt
+THIRD-PARTY-NOTICES.md
+```
+
+**설치가 필요 없습니다.** 폴더째 옮겨도 되고, `rhwp` 만 옆에 있으면 됩니다.
 
 ```bash
 tar xzf kayatext-macos-arm64.tar.gz
@@ -73,14 +81,17 @@ cd kayatext-macos-arm64
 ./kayatext --version
 ```
 
-`PATH` 에 두면 어디서나 부를 수 있습니다.
+`PATH` 에 두실 때는 **둘을 같은 폴더에** 두세요.
 
 ```bash
-sudo mv kayatext /usr/local/bin/
+sudo cp kayatext rhwp /usr/local/bin/
 ```
 
-> **서명이 없어 macOS 가 처음에 막습니다.** 개인 프로젝트라 아직 개발자 인증서를
-> 붙이지 않았습니다. 시스템 설정 → 개인정보 보호 및 보안에서 한 번 허용하시면 됩니다.
+> **서명이 없어 운영체제가 한 번 막습니다.** 개인 프로젝트라 아직 개발자 인증서를
+> 붙이지 않았습니다. **깨진 파일이 아닙니다.**
+>
+> - **macOS** — 시스템 설정 → 개인정보 보호 및 보안에서 「확인 없이 열기」
+> - **Windows** — SmartScreen 파란 창에서 「추가 정보」 → 「실행」
 
 ---
 
