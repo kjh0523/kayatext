@@ -32,6 +32,9 @@ docx·pdf 는 읽어 주는 도구가 많지만 한글 문서는 그렇지 않�
 
 ## 쓰는 법
 
+아래는 **`PATH` 에 둔 뒤**의 모습입니다. 압축을 막 푼 자리에서는 앞에 경로를
+붙여야 합니다 — [내려받기](#내려받기) 참고.
+
 ```bash
 kayatext 회의록.hwp                  # 회의록.md 로
 kayatext *.hwp *.xlsx -o out/        # 여러 개를 한 폴더로
@@ -75,16 +78,35 @@ THIRD-PARTY-NOTICES.md
 
 **설치가 필요 없습니다.** 폴더째 옮겨도 되고, `rhwp` 만 옆에 있으면 됩니다.
 
+**macOS · Linux**
+
 ```bash
 tar xzf kayatext-macos-arm64.tar.gz
 cd kayatext-macos-arm64
 ./kayatext --version
 ```
 
-`PATH` 에 두실 때는 **둘을 같은 폴더에** 두세요.
+**Windows** — PowerShell 은 현재 폴더를 뒤지지 않아 `.\` 가 필요합니다.
+`cmd.exe` 에서는 그냥 `kayatext` 로도 됩니다.
+
+```powershell
+cd kayatext-windows-x64
+.\kayatext.exe --version
+```
+
+### 어디서나 부르려면
+
+`PATH` 에 두면 앞의 `./` 없이 쓸 수 있습니다. **둘을 같은 폴더에** 두세요 —
+`rhwp` 가 옆에 없으면 `.hwp` 가 안 됩니다.
 
 ```bash
-sudo cp kayatext rhwp /usr/local/bin/
+sudo cp kayatext rhwp /usr/local/bin/          # macOS · Linux
+```
+
+```powershell
+# Windows — 폴더째 옮기고 그 폴더를 PATH 에 넣는 편이 간단합니다
+move kayatext-windows-x64 C:\tools\kayatext
+setx PATH "%PATH%;C:\tools\kayatext"
 ```
 
 > **서명이 없어 운영체제가 한 번 막습니다.** 개인 프로젝트라 아직 개발자 인증서를
