@@ -32,17 +32,28 @@ docx·pdf 는 읽어 주는 도구가 많지만 한글 문서는 그렇지 않�
 
 ## 쓰는 법
 
-아래는 **`PATH` 에 둔 뒤**의 모습입니다. 압축을 막 푼 자리에서는 앞에 경로를
-붙여야 합니다 — [내려받기](#내려받기) 참고.
+압축을 푼 폴더에서 (macOS · Linux)
 
 ```bash
-kayatext 회의록.hwp                  # 회의록.md 로
-kayatext *.hwp *.xlsx -o out/        # 여러 개를 한 폴더로
-kayatext 문서.hwp --txt              # 순수 텍스트로 (구조를 버림)
-kayatext 문서.hwp -                  # 표준 출력으로 (파이프용)
-kayatext --version
-kayatext --licenses                  # 오픈소스 고지
+./kayatext 회의록.hwp                  # 회의록.md 로
+./kayatext *.hwp *.xlsx -o out/        # 여러 개를 한 폴더로
+./kayatext 문서.hwp --txt              # 순수 텍스트로 (구조를 버림)
+./kayatext 문서.hwp -                  # 표준 출력으로 (파이프용)
+./kayatext --version
+./kayatext --licenses                  # 오픈소스 고지
 ```
+
+Windows PowerShell 에서는 `.\` 이고 확장자가 붙습니다.
+
+```powershell
+.\kayatext.exe 회의록.hwp
+.\kayatext.exe *.hwp *.xlsx -o out\
+.\kayatext.exe 문서.hwp --txt
+.\kayatext.exe --version
+```
+
+`PATH` 에 넣으면 앞의 `./` 없이 `kayatext …` 로 씁니다 —
+[어디서나 부르려면](#어디서나-부르려면) 참고.
 
 **파일 하나가 실패해도 멈추지 않습니다.** 실패 목록을 모아 마지막에 보고하고,
 하나라도 실패했으면 종료 코드 1 을 냅니다 — 스크립트가 판정할 수 있어야 하니까요.
@@ -142,7 +153,7 @@ setx PATH "%PATH%;C:\tools\kayatext"
 ### 오픈소스 고지
 
 ```bash
-kayatext --licenses
+./kayatext --licenses
 ```
 
 배포물의 `THIRD-PARTY-NOTICES.md` 에도 전문이 있습니다.
