@@ -132,15 +132,20 @@ setx PATH "%PATH%;C:\tools\kayatext"
 
 **오픈소스가 아닙니다.** 배포물의 `LICENSE.txt` 가 전문입니다.
 
-| | |
-|---|---|
-| 개인 · 학습 · 연구 · 비영리 | **무료** |
-| 법인 · 공공기관의 도입 검토 | **무료** |
-| 법인 · 공공기관의 계속적인 업무 사용 | 기업 라이선스 |
+**누구나 무료로 쓰실 수 있습니다** — 가정과 기업은 물론 관공서, 학교, 비영리
+단체 어디서든, 상업적·비상업적 용도로.
 
-**기능 제한은 없습니다.** 무료로 쓰든 기업 라이선스로 쓰든 되는 일이 같습니다.
-사용량을 세거나 기능을 잠그는 코드는 들어 있지 않습니다. 기업 라이선스로 받는 것은
-**적법한 사용 권리와 그 증빙**입니다.
+**기능을 제한하지 않습니다.** 유료판이 따로 없고 배포본은 이것 하나입니다.
+사용량을 세거나 기능을 잠그는 코드는 들어 있지 않습니다.
+
+### 기업 라이선스는 선택입니다
+
+**사도 되고 안 사도 됩니다. 프로그램이 달라지지 않습니다.**
+
+도입 심사나 감사에서 **소프트웨어를 쓸 권리를 서류로 증명**해야 하는 조직이
+있습니다. 「무료라서 그냥 씁니다」로는 통과되지 않는 자리입니다. 그런 곳을 위해
+**라이선스 증서·세금계산서·우선 지원**을 드립니다. **기능은 하나도 추가되지
+않습니다.**
 
 **재배포는 금지합니다.** 다른 사람이 받아 갈 수 있는 곳에 설치 파일을 올려 두는 것도
 여기 포함됩니다 — 사내 공유 폴더, 파일 서버, 그룹웨어 자료실, 웹하드, 공유 설정된
@@ -221,13 +226,19 @@ Markdown with all 91 of its tables intact.
 Accepts `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`. A failing file does not
 stop the run; failures are collected and reported at the end, with exit code 1.
 
-**This repository ships binaries only — it is not open source.** Free for personal,
-educational, non-profit, and evaluation use, with **no functional limits whatsoever**.
-A commercial license is required for ongoing business use by companies and public
-institutions; it grants the right to use and the paperwork to prove it, not extra
-features. Redistribution — including placing the archive on a shared drive or file
-server — is not permitted; please share this repository's address instead. Whatever you
-extract is entirely yours.
+**This repository ships binaries only — it is not open source, but it is free for
+everyone:** homes, companies, government offices, schools and non-profits alike, for
+commercial and non-commercial use, with **no functional limits whatsoever**. There is
+no paid edition; this is the only build there is.
+
+A commercial license is **optional**. Some organisations must show paperwork proving
+their right to use software before an audit or procurement review will pass; that
+licence provides a certificate, a tax invoice and priority support. **It adds no
+features** — paying customers run exactly the same program.
+
+Redistribution — including placing the archive on a shared drive or file server — is
+not permitted; please share this repository's address instead. Whatever you extract is
+entirely yours.
 
 Bundled open-source components remain under their own licenses; run `kayatext
 --licenses`. HWP support is built on [rhwp](https://github.com/edwardkim/rhwp) (MIT).
