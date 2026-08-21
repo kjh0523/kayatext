@@ -7,31 +7,40 @@ Copyright © 2026 가야태자 (kjh0523). All rights reserved.
 따라 사용을 허락합니다.
 
 
-1. 무료로 쓸 수 있는 범위
--------------------------
-
-**모든 기능을 제한 없이 무료로 쓸 수 있습니다.** 기능을 잠그거나 사용량을 세지
-않습니다. 아래 용도에는 별도 비용이 없습니다.
-
-  - 개인의 사적 이용
-  - 학습·연구·교육
-  - 비영리 단체의 활동
-  - 법인·공공기관의 도입 검토 및 평가
-
-
-2. 기업 라이선스가 필요한 경우
+1. 누구나 무료로 쓸 수 있습니다
 ------------------------------
 
-**법인·공공기관이 업무에 계속 사용하는 경우**에는 기업 라이선스가 필요합니다.
-평가 기간이 끝난 뒤의 실제 업무 사용이 여기 해당합니다.
+**어디서 쓰든, 무엇에 쓰든 무료입니다.** 가정과 기업은 물론 관공서, 학교,
+비영리 단체를 비롯한 모든 곳에서 상업적·비상업적 용도로 쓸 수 있습니다.
 
-기능은 같습니다. 기업 라이선스로 받는 것은 **적법한 사용 권리와 그 증빙**이며,
-필요에 따라 지원과 기술 문의가 포함됩니다.
+**기능을 제한하지 않습니다.** 기능을 잠그거나 사용량을 세는 코드는 들어 있지
+않습니다. 사용자를 구분해 다르게 동작하는 부분도 없습니다.
 
-  문의: https://github.com/kjh0523/KayaPDF
+**돈을 내야 쓸 수 있는 판이 따로 있지 않습니다.** 이 프로그램은 이것 하나입니다.
 
-기업 라이선스를 아직 갖추지 못했다는 이유로 프로그램이 멈추거나 기능이 잠기는
-일은 없습니다. 확인은 이용자의 몫으로 둡니다.
+
+2. 기업 라이선스 — 필요하신 곳만
+--------------------------------
+
+**사도 되고 안 사도 됩니다. 프로그램이 달라지지 않습니다.**
+
+조직에 따라 도입 심사나 감사에서 **소프트웨어를 쓸 권리를 서류로 증명**해야
+하는 경우가 있습니다. 「무료라서 그냥 씁니다」로는 통과되지 않는 자리입니다.
+그런 곳을 위해 기업 라이선스를 둡니다.
+
+기업 라이선스로 받으시는 것:
+
+  - 사용 권리를 확인하는 **라이선스 증서**
+  - **세금계산서**
+  - 우선 지원과 기술 문의
+
+**기능은 하나도 추가되지 않습니다.** 무료로 쓰시는 분과 완전히 같은 프로그램을
+쓰십니다.
+
+  문의: https://github.com/kjh0523/kayautils
+
+기업 라이선스가 없다는 이유로 프로그램이 멈추거나 기능이 잠기는 일은 없습니다.
+그런 장치를 넣지 않았습니다.
 
 
 3. 금지되는 행위
@@ -121,13 +130,19 @@ Copyright © 2026 가야태자 (kjh0523). All rights reserved.
 
 English summary (informative)
 
-KayaPDF is proprietary software, not open source. All features are free of charge
-for personal, educational, non-profit, and evaluation use, with no functional
-limits. A commercial license is required for ongoing business use by companies and
-public institutions; it grants the right to use and the documentation to prove it,
-not extra features. Redistribution, resale, and bundling into other products are
-prohibited. Documents you produce with it are entirely yours, with no restrictions.
-Third-party open-source components remain under their own licenses; see
-THIRD-PARTY-NOTICES.md. Provided without warranty.
+KayaPDF is proprietary software, not open source — but it is **free for everyone**:
+homes, companies, government offices, schools and non-profits alike, for commercial
+and non-commercial use, with **no functional limits**. There is no paid edition;
+this is the only build there is.
+
+A commercial license is **optional**. Some organisations must show paperwork proving
+their right to use software before an audit or a procurement review will pass; that
+licence provides a certificate, a tax invoice and priority support. **It adds no
+features** — paying customers run exactly the same program.
+
+Redistribution, resale, and bundling into other products are prohibited — including
+placing the installer where others can fetch it. Documents you produce with it are
+entirely yours, with no restrictions. Third-party open-source components remain
+under their own licenses; see THIRD-PARTY-NOTICES.md. Provided without warranty.
 
 In case of any discrepancy, the Korean text above governs.
