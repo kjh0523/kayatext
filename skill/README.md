@@ -1,5 +1,13 @@
 # AI 에이전트용 스킬
 
+**한국어** ·
+[Deutsch](README.de.md) ·
+[English](README.en.md) ·
+[Français](README.fr.md) ·
+[日本語](README.ja.md) ·
+[Русский](README.ru.md) ·
+[中文](README.zh.md)
+
 Claude 같은 도구에 **한글 문서를 읽으라고 하면 직접 파서를 짭니다.** `.hwp` 는
 바이너리 포맷이라 그렇게 하면 대개 깨진 글자가 나오거나 표가 사라집니다.
 

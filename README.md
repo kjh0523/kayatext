@@ -1,5 +1,13 @@
 # kayatext
 
+**한국어** ·
+[Deutsch](README.de.md) ·
+[English](README.en.md) ·
+[Français](README.fr.md) ·
+[日本語](README.ja.md) ·
+[Русский](README.ru.md) ·
+[中文](README.zh.md)
+
 **한글(HWP)·엑셀·워드 문서에서 AI 가 읽을 텍스트를 뽑습니다.**
 
 [내려받기](../../releases/latest) · [버그 제보](../../issues) ·
@@ -206,46 +214,6 @@ HWP 변환은 [rhwp](https://github.com/edwardkim/rhwp)(MIT) 위에 서 있습�
 
 증서를 받으려고 무리해서 파일을 보내지는 마세요.
 **주소 하나가 파일 열 개보다 낫습니다.**
-
----
-
-## English
-
-**kayatext** extracts text and Markdown from HWP (the Korean word processor format),
-Excel, Word, and RTF files, so they can be fed to AI pipelines **with their tables and
-headings intact**.
-
-HWP is the point. Other formats already have good extractors; Korean public-sector
-documents do not — and nearly all of them are HWP.
-
-Markdown is the default output because retrieval quality depends on structure
-surviving: a table flattened into prose retrieves badly, and without headings there is
-no boundary to chunk on. One 116-page government document yields 193,000 characters of
-Markdown with all 91 of its tables intact.
-
-Accepts `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`. A failing file does not
-stop the run; failures are collected and reported at the end, with exit code 1.
-
-**This repository ships binaries only — it is not open source, but it is free for
-everyone:** homes, companies, government offices, schools and non-profits alike, for
-commercial and non-commercial use, with **no functional limits whatsoever**. There is
-no paid edition; this is the only build there is.
-
-A commercial license is **optional**. Some organisations must show paperwork proving
-their right to use software before an audit or procurement review will pass; that
-licence provides a certificate, a tax invoice and priority support. **It adds no
-features** — paying customers run exactly the same program.
-
-Redistribution — including placing the archive on a shared drive or file server — is
-not permitted; please share this repository's address instead. Whatever you extract is
-entirely yours.
-
-Bundled open-source components remain under their own licenses; run `kayatext
---licenses`. HWP support is built on [rhwp](https://github.com/edwardkim/rhwp) (MIT).
-
-Bug reports are welcome. **Please do not attach real work documents** — they carry
-personal data, and author names survive in file metadata. Describe the symptom, or link
-to a publicly published government document that reproduces it.
 
 ---
 
