@@ -96,8 +96,12 @@ RTF 只读到段落层级 —— 原文若有表格，会以散文形式输出�
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | 准备中 |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | 靠后 |
+| Linux (ARM64) | 靠后 |
+
+Linux 版为**静态链接（musl）**，不挑发行版。Ubuntu、Debian、Alpine、CentOS 解压即可
+运行。放进容器时也不需要另外安装库。
 
 解压后有四样东西。
 
@@ -113,8 +117,12 @@ THIRD-PARTY-NOTICES.md
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

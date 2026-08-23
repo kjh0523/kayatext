@@ -107,8 +107,13 @@ Ergebnis sagt es dazu.
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | in Arbeit |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | später |
+| Linux (ARM64) | später |
+
+Der Linux-Build ist **statisch gelinkt (musl)** und läuft daher auf jeder
+Distribution — Ubuntu, Debian, Alpine, CentOS, direkt aus dem Archiv heraus. Auch im
+Container braucht es keine zusätzlichen Bibliotheken.
 
 Im Archiv liegen vier Dinge.
 
@@ -125,8 +130,12 @@ wichtig ist nur, dass `rhwp` daneben liegt.
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

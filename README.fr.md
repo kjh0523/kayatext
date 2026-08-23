@@ -107,8 +107,13 @@ et le résultat le précise.
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | en préparation |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | plus tard |
+| Linux (ARM64) | plus tard |
+
+La version Linux est **liée statiquement (musl)** : elle ne dépend pas de la
+distribution — Ubuntu, Debian, Alpine, CentOS fonctionnent directement depuis
+l'archive. Dans un conteneur, aucune bibliothèque supplémentaire n'est nécessaire.
 
 L'archive contient quatre éléments.
 
@@ -125,8 +130,12 @@ soit à côté.
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

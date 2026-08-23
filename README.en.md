@@ -103,8 +103,13 @@ result says so.
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | in progress |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | later |
+| Linux (ARM64) | later |
+
+The Linux build is **statically linked (musl)**, so it does not care which
+distribution you run — Ubuntu, Debian, Alpine, CentOS all work straight out of the
+archive. Dropping it into a container needs no extra libraries either.
 
 The archive holds four things.
 
@@ -121,8 +126,12 @@ THIRD-PARTY-NOTICES.md
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

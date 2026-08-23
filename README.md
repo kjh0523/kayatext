@@ -99,8 +99,13 @@ RTF 는 문단까지만 읽습니다 — 원본에 표가 있으면 줄글로 �
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | 준비 중 |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | 후순위 |
+| Linux (ARM64) | 후순위 |
+
+리눅스판은 **정적 링크(musl)** 라 배포판을 가리지 않습니다. 우분투·데비안·알파인·
+CentOS 어디서든 풀어서 바로 돌아갑니다. 컨테이너에 넣을 때도 라이브러리를 같이
+넣을 필요가 없습니다.
 
 압축을 풀면 네 개가 들어 있습니다.
 
@@ -116,8 +121,12 @@ THIRD-PARTY-NOTICES.md
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

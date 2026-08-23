@@ -100,8 +100,13 @@ RTF は段落までしか読みません — 元に表があっても地の文�
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | 準備中 |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | 後回し |
+| Linux (ARM64) | 後回し |
+
+Linux 版は**静的リンク（musl）**なのでディストリビューションを選びません。Ubuntu・
+Debian・Alpine・CentOS のいずれでも、展開すればそのまま動きます。コンテナに入れる
+ときも別途ライブラリを入れる必要がありません。
 
 展開すると 4 つ入っています。
 
@@ -118,8 +123,12 @@ THIRD-PARTY-NOTICES.md
 **macOS・Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 

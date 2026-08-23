@@ -105,8 +105,13 @@ RTF читается только до уровня абзацев — если 
 |---|---|
 | **macOS (Apple Silicon)** | ✅ [`kayatext-macos-arm64.tar.gz`](../../releases/latest) |
 | **Windows (x64)** | ✅ [`kayatext-windows-x64.zip`](../../releases/latest) |
-| Linux (x64, musl) | готовится |
+| **Linux (x64)** | ✅ [`kayatext-linux-x64.tar.gz`](../../releases/latest) |
 | macOS (Intel) | позже |
+| Linux (ARM64) | позже |
+
+Сборка для Linux **слинкована статически (musl)**, поэтому дистрибутив не важен —
+Ubuntu, Debian, Alpine, CentOS работают прямо из архива. Для контейнера тоже не нужны
+дополнительные библиотеки.
 
 В архиве четыре вещи.
 
@@ -123,8 +128,12 @@ THIRD-PARTY-NOTICES.md
 **macOS · Linux**
 
 ```bash
-tar xzf kayatext-macos-arm64.tar.gz
-cd kayatext-macos-arm64
+# macOS
+tar xzf kayatext-macos-arm64.tar.gz && cd kayatext-macos-arm64
+
+# Linux
+tar xzf kayatext-linux-x64.tar.gz && cd kayatext-linux-x64
+
 ./kayatext --version
 ```
 
