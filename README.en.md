@@ -68,6 +68,23 @@ Put it on your `PATH` and the leading `./` goes away — see
 **One failing file does not stop the run.** Failures are collected and reported at the
 end, and the exit code is 1 if anything failed — a script has to be able to tell.
 
+### Message language
+
+Help and error messages **follow your locale**. There are two: Korean and English.
+
+```bash
+LANG=ko_KR.UTF-8 kayatext doc.hwp     # Korean
+LANG=C           kayatext doc.hwp     # English
+KAYATEXT_LANG=en kayatext doc.hwp     # English regardless of locale
+```
+
+A `LANG` starting with `ko` gives Korean; anything else gives English. On Windows,
+where `LANG` is usually unset, the system display language is used instead.
+
+> There is a reason this is not seven languages. English is the lingua franca of the
+> terminal, and with seven versions of every error I could not read the line you paste
+> into an issue.
+
 ### Formats accepted
 
 `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`

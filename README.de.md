@@ -71,6 +71,24 @@ Liegt es im `PATH`, entfällt das führende `./` — siehe
 am Ende gemeldet; ist auch nur eine fehlgeschlagen, lautet der Exit-Code 1 — ein Skript
 muss das entscheiden können.
 
+### Sprache der Meldungen
+
+Hilfe und Fehlermeldungen **richten sich nach Ihrer Locale**. Es gibt zwei: Koreanisch
+und Englisch.
+
+```bash
+LANG=ko_KR.UTF-8 kayatext Dokument.hwp     # Koreanisch
+LANG=C           kayatext Dokument.hwp     # Englisch
+KAYATEXT_LANG=en kayatext Dokument.hwp     # Englisch, unabhängig von der Locale
+```
+
+Beginnt `LANG` mit `ko`, wird Koreanisch gewählt, sonst Englisch. Unter Windows, wo
+`LANG` meist fehlt, gilt stattdessen die Anzeigesprache des Systems.
+
+> Dass es nicht sieben Sprachen sind, hat einen Grund. Die Lingua franca des Terminals
+> ist Englisch, und bei sieben Fassungen jeder Fehlermeldung könnte ich die Zeile nicht
+> mehr lesen, die Sie in ein Issue einfügen.
+
 ### Angenommene Formate
 
 `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`

@@ -72,6 +72,23 @@ Placé dans le `PATH`, le `./` initial disparaît — voir
 signalés à la fin, et le code de sortie vaut 1 s'il y en a eu au moins un — un script
 doit pouvoir en juger.
 
+### Langue des messages
+
+L'aide et les erreurs **suivent votre locale**. Il y en a deux : le coréen et l'anglais.
+
+```bash
+LANG=ko_KR.UTF-8 kayatext document.hwp     # coréen
+LANG=C           kayatext document.hwp     # anglais
+KAYATEXT_LANG=en kayatext document.hwp     # anglais, quelle que soit la locale
+```
+
+Si `LANG` commence par `ko`, c'est le coréen ; sinon l'anglais. Sous Windows, où `LANG`
+est généralement absent, c'est la langue d'affichage du système qui décide.
+
+> Ce n'est pas en sept langues, et pour une raison précise : la langue véhiculaire du
+> terminal est l'anglais, et avec sept versions de chaque erreur je ne pourrais plus
+> lire la ligne que vous collez dans une issue.
+
 ### Formats acceptés
 
 `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`
