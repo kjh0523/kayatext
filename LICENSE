@@ -2,6 +2,7 @@ KayaPDF 사용 조건
 =================
 
 Copyright © 2026 가야태자 (kjh0523). All rights reserved.
+Contact: kayautils@gmail.com
 
 이 소프트웨어는 오픈소스가 아닙니다. 저작권은 저작자에게 있으며, 아래 조건에
 따라 사용을 허락합니다.
@@ -31,13 +32,17 @@ Copyright © 2026 가야태자 (kjh0523). All rights reserved.
 기업 라이선스로 받으시는 것:
 
   - 사용 권리를 확인하는 **라이선스 증서**
-  - **세금계산서**
+  - 도입 심사·감사에 낼 수 있는 **계약 서류**
   - 우선 지원과 기술 문의
 
 **기능은 하나도 추가되지 않습니다.** 무료로 쓰시는 분과 완전히 같은 프로그램을
 쓰십니다.
 
-  문의: https://github.com/kjh0523/kayautils
+**가격과 증빙 형태는 협의로 정합니다.** 쓰시는 범위와 필요하신 서류가 곳마다
+다르기 때문입니다. 아래로 문의 주십시오.
+
+  문의: kayautils@gmail.com
+  https://github.com/kjh0523/kayautils
 
 기업 라이선스가 없다는 이유로 프로그램이 멈추거나 기능이 잠기는 일은 없습니다.
 그런 장치를 넣지 않았습니다.
@@ -60,8 +65,8 @@ Copyright © 2026 가야태자 (kjh0523). All rights reserved.
       다만 **이용자 본인이 자기 기기에서 쓰기 위해** 개인 저장소나 백업에 두는
       것은 제한하지 않습니다.
 
-      조직 안에 배포해야 하는 사정이 있으시면 위 문의처로 연락 주십시오.
-      사내 배포를 허용하는 별도 조건을 협의할 수 있습니다.
+      조직 안에 배포해야 하는 사정이 있으시면 kayautils@gmail.com 으로 연락
+      주십시오. 사내 배포를 허용하는 별도 조건을 협의할 수 있습니다.
 
   (2) 다른 제품에 포함시키는 것
       이 소프트웨어를 다른 제품·서비스의 구성 요소로 넣어 배포할 수 없습니다.
@@ -137,12 +142,15 @@ this is the only build there is.
 
 A commercial license is **optional**. Some organisations must show paperwork proving
 their right to use software before an audit or a procurement review will pass; that
-licence provides a certificate, a tax invoice and priority support. **It adds no
-features** — paying customers run exactly the same program.
+licence provides a certificate, contract paperwork and priority support. **It adds no
+features** — paying customers run exactly the same program. The price and the form of
+the paperwork are settled by agreement; write to kayautils@gmail.com.
 
 Redistribution, resale, and bundling into other products are prohibited — including
-placing the installer where others can fetch it. Documents you produce with it are
-entirely yours, with no restrictions. Third-party open-source components remain
-under their own licenses; see THIRD-PARTY-NOTICES.md. Provided without warranty.
+placing the installer where others can fetch it. If your organisation genuinely needs
+to host it internally, write to kayautils@gmail.com and separate terms can be agreed.
+Documents you produce with it are entirely yours, with no restrictions. Third-party
+open-source components remain under their own licenses; see THIRD-PARTY-NOTICES.md.
+Provided without warranty.
 
 In case of any discrepancy, the Korean text above governs.

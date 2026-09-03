@@ -53,6 +53,7 @@ Im entpackten Ordner (macOS · Linux)
 ./kayatext Dokument.hwp -              # nach stdout (für Pipes)
 ./kayatext --version
 ./kayatext --licenses                  # Open-Source-Hinweise
+./kayatext --terms                     # Nutzungsbedingungen (mit Kontaktadresse)
 ```
 
 In der Windows-PowerShell braucht es `.\` und die Dateiendung.
@@ -188,25 +189,29 @@ Kein Code darin zählt Ihre Nutzung oder sperrt eine Funktion.
 
 Manche Organisationen müssen bei einer Beschaffungsprüfung oder einem Audit **schriftlich
 belegen, dass sie eine Software benutzen dürfen**. „Es ist kostenlos, also nutzen wir es
-einfach“ reicht dort nicht. Für solche Stellen gibt es **eine Lizenzurkunde, eine
-Rechnung und bevorzugten Support**. **Funktionen kommen keine hinzu.**
+einfach“ reicht dort nicht. Für solche Stellen gibt es **eine Lizenzurkunde,
+Vertragsunterlagen und bevorzugten Support**. **Funktionen kommen keine hinzu.**
+
+**Preis und Form der Nachweise werden im Gespräch festgelegt**, denn Nutzungsumfang und
+benötigte Unterlagen sind überall anders. Schreiben Sie an **kayautils@gmail.com**.
 
 **Weitergabe ist untersagt.** Dazu gehört auch, das Archiv irgendwo abzulegen, wo andere
 es sich holen können — interne Freigabeordner, Dateiserver, Dokumentenablagen in
 Groupware, Filehoster, Cloud-Laufwerke mit aktivierter Freigabe. Geben Sie statt der
 Datei bitte die Adresse dieses Repositorys weiter. Wenn Sie es innerhalb Ihrer
-Organisation wirklich verteilen müssen, melden Sie sich per Issue — dann lassen sich
-gesonderte Bedingungen vereinbaren.
+Organisation wirklich verteilen müssen, schreiben Sie an **kayautils@gmail.com** — dann
+lassen sich gesonderte Bedingungen vereinbaren.
 
 **Für den extrahierten Text gibt es keinerlei Einschränkung.** Er gehört ganz Ihnen.
 
-### Open-Source-Hinweise
+### Open-Source-Hinweise · Nutzungsbedingungen
 
 ```bash
-./kayatext --licenses
+./kayatext --licenses      # die mitgelieferten Open-Source-Komponenten
+./kayatext --terms         # die Nutzungsbedingungen des Programms selbst
 ```
 
-Der volle Text liegt auch als `THIRD-PARTY-NOTICES.md` im Archiv.
+Die vollen Texte liegen auch als `THIRD-PARTY-NOTICES.md` und `LICENSE.txt` im Archiv.
 
 Die HWP-Unterstützung steht auf [rhwp](https://github.com/edwardkim/rhwp) (MIT). Ohne
 dieses Projekt gäbe es dieses Werkzeug nicht.

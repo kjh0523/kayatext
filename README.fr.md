@@ -54,6 +54,7 @@ Depuis le dossier décompressé (macOS · Linux)
 ./kayatext document.hwp -              # vers la sortie standard (pour les tubes)
 ./kayatext --version
 ./kayatext --licenses                  # mentions open source
+./kayatext --terms                     # conditions d'utilisation (avec le contact)
 ```
 
 Sous PowerShell (Windows), il faut `.\` et l'extension.
@@ -191,25 +192,31 @@ fonction.
 Certaines organisations doivent **prouver sur papier qu'elles ont le droit d'utiliser un
 logiciel** avant qu'un examen d'achat ou un audit ne passe. « C'est gratuit, alors on
 l'utilise » ne suffit pas dans ce cadre. Pour ces structures, il y a **un certificat de
-licence, une facture et un support prioritaire**. **Cela n'ajoute aucune
+licence, des documents contractuels et un support prioritaire**. **Cela n'ajoute aucune
 fonctionnalité.**
+
+**Le prix et la forme des justificatifs se règlent d'un commun accord**, car le périmètre
+d'usage et les documents nécessaires diffèrent d'une organisation à l'autre. Écrivez à
+**kayautils@gmail.com**.
 
 **La redistribution est interdite.** Cela inclut déposer l'archive là où d'autres peuvent
 la récupérer — dossier partagé interne, serveur de fichiers, bibliothèque documentaire
 d'un intranet, service d'hébergement de fichiers, disque en nuage avec le partage activé.
 Pour en parler autour de vous, transmettez l'adresse de ce dépôt plutôt que le fichier.
-Si vous avez réellement besoin de le diffuser dans votre organisation, ouvrez une issue :
-des conditions particulières peuvent être convenues.
+Si vous avez réellement besoin de le diffuser dans votre organisation, écrivez à
+**kayautils@gmail.com** : des conditions particulières peuvent être convenues.
 
 **Le texte extrait n'est soumis à aucune restriction.** Il est entièrement à vous.
 
-### Mentions open source
+### Mentions open source · conditions d'utilisation
 
 ```bash
-./kayatext --licenses
+./kayatext --licenses      # les composants open source fournis
+./kayatext --terms         # les conditions d'utilisation du programme
 ```
 
-Le texte intégral figure aussi dans `THIRD-PARTY-NOTICES.md`, dans l'archive.
+Les textes intégraux figurent aussi dans `THIRD-PARTY-NOTICES.md` et `LICENSE.txt`,
+dans l'archive.
 
 La prise en charge du HWP repose sur [rhwp](https://github.com/edwardkim/rhwp) (MIT).
 Sans ce projet, cet outil n'existerait pas.

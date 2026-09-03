@@ -51,6 +51,7 @@ From the unpacked folder (macOS · Linux)
 ./kayatext doc.hwp -                   # to stdout (for pipes)
 ./kayatext --version
 ./kayatext --licenses                  # open-source notices
+./kayatext --terms                     # usage terms (includes the licensing contact)
 ```
 
 In Windows PowerShell it's `.\` and the extension is required.
@@ -182,25 +183,30 @@ code in it counts your usage or locks a feature.
 
 Some organisations must **prove on paper that they have the right to use a piece of
 software** before a procurement review or an audit will pass. "It's free, so we just use
-it" does not clear that bar. For those places there is a **licence certificate, a tax
-invoice and priority support**. **It adds no features whatsoever.**
+it" does not clear that bar. For those places there is a **licence certificate,
+contract paperwork and priority support**. **It adds no features whatsoever.**
+
+**The price and the form of the paperwork are settled by agreement**, because the scope
+of use and the documents each organisation needs differ. Write to
+**kayautils@gmail.com**.
 
 **Redistribution is not permitted.** That includes putting the archive anywhere other
 people can pick it up — an internal shared folder, a file server, a groupware document
 library, a file-hosting service, a cloud drive with sharing turned on. When you tell
 someone about it, send this repository's address instead of the file. If you have a
-real need to distribute it inside your organisation, open an issue and we can work out
-separate terms.
+real need to distribute it inside your organisation, write to **kayautils@gmail.com**
+and we can work out separate terms.
 
 **There are no restrictions on the text you extract.** It is entirely yours.
 
-### Open-source notices
+### Open-source notices · usage terms
 
 ```bash
-./kayatext --licenses
+./kayatext --licenses      # the open-source components shipped with it
+./kayatext --terms         # this program's own usage terms
 ```
 
-The full text is also in `THIRD-PARTY-NOTICES.md` in the archive.
+The full texts are also in `THIRD-PARTY-NOTICES.md` and `LICENSE.txt` in the archive.
 
 HWP support stands on [rhwp](https://github.com/edwardkim/rhwp) (MIT). Without that
 project this tool would not exist.
