@@ -62,7 +62,7 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## 让它做什么
 
-- 遇到 `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`，**不要写解析器**，
+- 遇到 `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`，**不要写解析器**，
   调用 `kayatext`
 - **默认用 Markdown。** 按纯文本提取，表格会变成散文 —— 一份 116 页的公文里有 91 个表格
 - 如果没有 `kayatext`，**要告诉用户。** 不要改为自己写解析器、交出残缺的结果 ——
@@ -76,6 +76,8 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## 目前还不支持
 
-`kayatext` 读不了 `.pdf` `.pptx` `.doc`，技能里也是这么说的。
+`kayatext` 读不了 `.pptx` `.doc`（旧格式），技能里也是这么说的。
+
+**PDF 是可以读的** —— 有框线的表格和标题会保留，没有框线的表格会变成正文。
 
 MCP 服务器正在准备中，目标是不用安装、通过 `npx` 直接使用。

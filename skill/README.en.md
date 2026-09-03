@@ -65,7 +65,7 @@ skill isn't installed.
 
 ## What it tells the agent to do
 
-- for `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`, **don't write a parser** —
+- for `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`, **don't write a parser** —
   call `kayatext`
 - **default to Markdown.** Extract plain text and the tables become prose — one
   116-page government document had 91 of them
@@ -82,7 +82,10 @@ this skill is there to prevent.
 
 ## Not supported yet
 
-`kayatext` cannot read `.pdf` `.pptx` `.doc`, and the skill says so.
+`kayatext` cannot read `.pptx` or `.doc` (the old format), and the skill says so.
+
+**PDF is read** — ruled tables and headings survive; tables without rules come out
+as prose.
 
 An MCP server is in progress. The goal is to make it usable through `npx`, with no
 installation.

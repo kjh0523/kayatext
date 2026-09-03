@@ -65,7 +65,7 @@ que la compétence n'est pas installée.
 
 ## Ce qu'elle demande à l'agent
 
-- pour `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`, **ne pas écrire
+- pour `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`, **ne pas écrire
   d'analyseur** — appeler `kayatext`
 - **utiliser Markdown par défaut.** En texte brut, les tableaux deviennent de la prose —
   un document administratif de 116 pages en comptait 91
@@ -82,7 +82,11 @@ savoir** : voilà l'échec que cette compétence cherche vraiment à éviter.
 
 ## Ce qui ne marche pas encore
 
-`kayatext` ne sait pas lire `.pdf` `.pptx` `.doc`, et la compétence le dit.
+`kayatext` ne sait pas lire `.pptx` ni `.doc` (l'ancien format), et la compétence
+le dit.
+
+**Le PDF, lui, est lu** — les tableaux avec filets et les titres survivent ; les
+tableaux sans filets sortent en texte courant.
 
 Un serveur MCP est en préparation. L'objectif est de pouvoir s'en servir via `npx`, sans
 installation.

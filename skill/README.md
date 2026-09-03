@@ -62,7 +62,7 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## 무엇을 시키나
 
-- `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` 는 **파서를 짜지 말고**
+- `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf` 는 **파서를 짜지 말고**
   `kayatext` 를 부른다
 - **Markdown 을 기본으로** 쓴다. 순수 텍스트로 뽑으면 표가 줄글이 된다 —
   116쪽 공문 하나에 표가 91개였다
@@ -78,6 +78,8 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## 아직 안 되는 것
 
-`.pdf` `.pptx` `.doc` 는 `kayatext` 가 못 읽습니다. 스킬도 그렇게 말합니다.
+`.pptx` `.doc`(옛 형식) 는 `kayatext` 가 못 읽습니다. 스킬도 그렇게 말합니다.
+
+**PDF 는 읽습니다** — 선이 그려진 표와 제목은 살고, 선 없는 표는 줄글이 됩니다.
 
 MCP 서버는 준비 중입니다. 설치 없이 `npx` 로 쓰게 하는 것이 목표입니다.

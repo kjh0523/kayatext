@@ -65,7 +65,7 @@ dann ist der Skill nicht installiert.
 
 ## Was er dem Agenten aufträgt
 
-- bei `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` **keinen Parser schreiben**,
+- bei `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf` **keinen Parser schreiben**,
   sondern `kayatext` aufrufen
 - **standardmäßig Markdown.** Als reiner Text extrahiert werden aus den Tabellen
   Fließtext — ein Behördendokument mit 116 Seiten hatte 91 davon
@@ -83,6 +83,10 @@ weiß** — das ist das eigentliche Versagen, das dieser Skill verhindern soll.
 
 ## Was noch nicht geht
 
-`.pdf` `.pptx` `.doc` kann `kayatext` nicht lesen, und der Skill sagt das auch.
+`.pptx` und `.doc` (das alte Format) kann `kayatext` nicht lesen, und der Skill
+sagt das auch.
+
+**PDF wird gelesen** — Tabellen mit Linien und Überschriften bleiben erhalten,
+Tabellen ohne Linien werden zu Fließtext.
 
 Ein MCP-Server ist in Arbeit. Ziel ist die Nutzung über `npx`, ganz ohne Installation.

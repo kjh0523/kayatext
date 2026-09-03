@@ -88,13 +88,17 @@ where `LANG` is usually unset, the system display language is used instead.
 
 ### Formats accepted
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
 
 RTF is read down to paragraphs only — if the original has tables, they come out as
 prose. That isn't something we threw away; the parser doesn't hand it over, and the
 result says so.
 
-`.pdf` `.pptx` `.doc` are not supported yet.
+For PDF the structure is rebuilt from coordinates — **ruled tables and headings
+survive; tables drawn without rules come out as prose.** If you have the original
+(Hangul, Excel, Word), that path keeps every table.
+
+`.pptx` and `.doc` (the old format) are not supported yet.
 
 ---
 

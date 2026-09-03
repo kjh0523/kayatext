@@ -64,7 +64,7 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## 何をさせるか
 
-- `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` は**パーサーを書かず**に
+- `.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf` は**パーサーを書かず**に
   `kayatext` を呼ぶ
 - **Markdown を既定にする。** プレーンテキストで取り出すと表が地の文になる —
   116 ページの公文書 1 件に表が 91 個あった
@@ -80,6 +80,8 @@ curl -sL -o ~/.claude/skills/korean-documents/SKILL.md \
 
 ## まだできないこと
 
-`.pdf` `.pptx` `.doc` は `kayatext` が読めません。スキルもそう伝えます。
+`.pptx` `.doc`（旧形式）は `kayatext` が読めません。スキルもそう伝えます。
+
+**PDF は読めます** — 罫線のある表と見出しは残り、罫線のない表は地の文になります。
 
 MCP サーバーは準備中です。インストールなしで `npx` から使えるようにするのが目標です。

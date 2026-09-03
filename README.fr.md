@@ -92,13 +92,18 @@ est généralement absent, c'est la langue d'affichage du système qui décide.
 
 ### Formats acceptés
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
 
 Le RTF n'est lu que jusqu'aux paragraphes — si l'original comporte des tableaux, ils
 ressortent en prose. Ce n'est pas nous qui l'avons jeté : l'analyseur ne le fournit pas,
 et le résultat le précise.
 
-`.pdf` `.pptx` `.doc` ne sont pas encore pris en charge.
+Pour le PDF, la structure est reconstruite à partir des coordonnées — **les tableaux
+avec filets et les titres survivent ; les tableaux sans filets sortent en texte
+courant.** Si vous avez l'original (Hangul, Excel, Word), ce chemin conserve tous
+les tableaux.
+
+`.pptx` et `.doc` (l'ancien format) ne sont pas encore pris en charge.
 
 ---
 

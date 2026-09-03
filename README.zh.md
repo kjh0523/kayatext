@@ -82,12 +82,15 @@ KAYATEXT_LANG=en kayatext 文档.hwp     # 无论区域设置一律英文
 
 ### 支持的格式
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
 
 RTF 只读到段落层级 —— 原文若有表格，会以散文形式输出。这不是我们丢掉的，而是解析器
 没有给出，结果中会如实说明。
 
-`.pdf` `.pptx` `.doc` 尚不支持。
+PDF 会根据坐标重建结构 —— **有框线的表格和标题会保留，没有框线的表格会变成正文。**
+如果你有原件（韩文字处理、Excel、Word），那条路径能完整保留表格。
+
+`.pptx` `.doc`（旧格式）尚不支持。
 
 ---
 

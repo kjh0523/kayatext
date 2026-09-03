@@ -1,6 +1,6 @@
 ---
 name: korean-documents
-description: Read HWP, HWPX, Excel, Word, and RTF documents as Markdown using the kayatext CLI. Use this whenever a task involves reading, summarizing, searching, or extracting content from .hwp, .hwpx, .hml, .xlsx, .xlsm, .docx, or .rtf files — instead of writing ad-hoc parsing code. Especially important for .hwp/.hwpx (the Korean word processor format), which Python libraries handle poorly or not at all.
+description: Read HWP, HWPX, Excel, Word, RTF, and PDF documents as Markdown using the kayatext CLI. Use this whenever a task involves reading, summarizing, searching, or extracting content from .hwp, .hwpx, .hml, .xlsx, .xlsm, .docx, .rtf, or .pdf files — instead of writing ad-hoc parsing code. Especially important for .hwp/.hwpx (the Korean word processor format), which Python libraries handle poorly or not at all. For PDF the structure is rebuilt from coordinates, so ruled tables and headings survive.
 ---
 
 # 한국어 문서 읽기 (kayatext)
@@ -36,9 +36,13 @@ kayatext 문서.hwp -          # 표준 출력으로 Markdown
 .xlsx .xlsm              엑셀
 .docx                    워드
 .rtf                     서식 있는 텍스트
+.pdf                     좌표에서 구조를 다시 세운다
 ```
 
-`.pdf` `.pptx` `.doc` 는 **아직 안 받는다.** 그건 다른 방법을 찾아야 한다.
+**PDF 는 선이 그려진 표와 제목이 살아난다.** 선 없는 표는 줄글이 된다 —
+원본(한글·엑셀·워드)이 있으면 그쪽이 표를 다 살리니 그것을 먼저 찾는다.
+
+`.pptx` `.doc`(옛 형식) 는 **아직 안 받는다.** 그건 다른 방법을 찾아야 한다.
 
 ## 쓰는 법
 
