@@ -92,7 +92,7 @@ est généralement absent, c'est la langue d'affichage du système qui décide.
 
 ### Formats acceptés
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.pptx` `.rtf` `.pdf`
 
 Le RTF n'est lu que jusqu'aux paragraphes — si l'original comporte des tableaux, ils
 ressortent en prose. Ce n'est pas nous qui l'avons jeté : l'analyseur ne le fournit pas,
@@ -103,7 +103,12 @@ avec filets et les titres survivent ; les tableaux sans filets sortent en texte
 courant.** Si vous avez l'original (Hangul, Excel, Word), ce chemin conserve tous
 les tableaux.
 
-`.pptx` et `.doc` (l'ancien format) ne sont pas encore pris en charge.
+`.pptx` donne un titre à chaque diapositive, et **les notes du présentateur ressortent aussi**.
+
+Les **numéros de paragraphe** automatiques (`article 3`, `1.1`, `a.`, `①`) et les **puces** ressortent également.
+Certaines puces viennent de la zone privée des polices Hangul et apparaissent comme des carrés sans cette police.
+
+`.doc` et `.ppt` (les anciens formats binaires) ne sont pas encore pris en charge.
 
 ---
 

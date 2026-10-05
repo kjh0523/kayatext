@@ -88,7 +88,7 @@ where `LANG` is usually unset, the system display language is used instead.
 
 ### Formats accepted
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.pptx` `.rtf` `.pdf`
 
 RTF is read down to paragraphs only — if the original has tables, they come out as
 prose. That isn't something we threw away; the parser doesn't hand it over, and the
@@ -98,7 +98,12 @@ For PDF the structure is rebuilt from coordinates — **ruled tables and heading
 survive; tables drawn without rules come out as prose.** If you have the original
 (Hangul, Excel, Word), that path keeps every table.
 
-`.pptx` and `.doc` (the old format) are not supported yet.
+`.pptx` gives each slide a heading, and **speaker notes come through too**.
+
+Automatic paragraph **numbers** (`Article 3`, `1.1`, `a.`, `①`) and **bullets** come through as well.
+Some bullet glyphs live in Hangul's private font area and show as boxes without that font.
+
+`.doc` and `.ppt` (the old binary formats) are not supported yet.
 
 ---
 

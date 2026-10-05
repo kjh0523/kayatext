@@ -92,7 +92,7 @@ Beginnt `LANG` mit `ko`, wird Koreanisch gewählt, sonst Englisch. Unter Windows
 
 ### Angenommene Formate
 
-`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.rtf` `.pdf`
+`.hwp` `.hwpx` `.hml` `.xlsx` `.xlsm` `.docx` `.pptx` `.rtf` `.pdf`
 
 RTF wird nur bis zur Absatzebene gelesen — enthält das Original Tabellen, kommen sie als
 Fließtext heraus. Das haben nicht wir weggeworfen; der Parser gibt es nicht her, und das
@@ -102,7 +102,12 @@ Bei PDF wird die Struktur aus den Koordinaten rekonstruiert — **Tabellen mit L
 und Überschriften bleiben erhalten, Tabellen ohne Linien werden zu Fließtext.**
 Wenn Sie das Original haben (Hangul, Excel, Word), behält dieser Weg alle Tabellen.
 
-`.pptx` und `.doc` (das alte Format) gehen noch nicht.
+`.pptx` bekommt pro Folie eine Überschrift, und **die Notizen kommen mit**.
+
+Automatisch vergebene **Absatznummern** (`§ 3`, `1.1`, `a.`, `①`) und **Aufzählungszeichen** kommen ebenfalls durch.
+Einige Aufzählungszeichen stammen aus dem privaten Schriftbereich von Hangul und erscheinen ohne diese Schrift als Kästchen.
+
+`.doc` und `.ppt` (die alten Binärformate) gehen noch nicht.
 
 ---
 
